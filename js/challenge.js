@@ -5,7 +5,6 @@ const heart = document.getElementById("heart")
 const pause = document.getElementById("pause")
 const likes = document.querySelector(".likes")
 const counterNumLike = {}
-const likesArray = []
 let countGo = true
 
 const commentsDiv = document.getElementById("list")
@@ -45,10 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     heart.addEventListener("click", function(){
-        const likesHTMLCollection = likes.children;
-        for(let i = 0; i < likesHTMLCollection.length; i++){
-            likesArray.push(likesHTMLCollection[i].innerText)
-        }
+
         const counterValue = counter.innerText;
         if (counterValue in counterNumLike){
             let li = document.getElementById(counterValue)
